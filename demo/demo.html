@@ -1,0 +1,87 @@
+<link rel="stylesheet"
+      href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
+<link rel="stylesheet"
+      href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css">
+
+<style>
+    .owl-carousel .item {
+        height: 10rem;
+        background: #4DC7A0;
+        padding: 1rem;
+    }
+
+    .owl-thumbs .item {
+        height: 4rem;
+        background: #c7383d;
+        padding: 1rem;
+    }
+
+    .current {
+        background: #364ac7;
+    }
+
+</style>
+
+<div id="carousel" class="owl-carousel">
+    <div class="item"><h4>1</h4></div>
+    <div class="item"><h4>2</h4></div>
+    <div class="item"><h4>3</h4></div>
+    <div class="item"><h4>4</h4></div>
+    <div class="item"><h4>5</h4></div>
+    <div class="item"><h4>6</h4></div>
+    <div class="item"><h4>7</h4></div>
+    <div class="item"><h4>8</h4></div>
+    <div class="item"><h4>9</h4></div>
+    <div class="item"><h4>10</h4></div>
+    <div class="item"><h4>11</h4></div>
+    <div class="item"><h4>12</h4></div>
+</div>
+
+<div class="owl-carousel owl-thumbs" data-owl-sync="carousel">
+    <div class="item">slide 1</div>
+    <div class="item">slide 2</div>
+    <div class="item">slide 3</div>
+    <div class="item">slide 4</div>
+    <div class="item">slide 5</div>
+    <div class="item">slide 6</div>
+    <div class="item">slide 7</div>
+    <div class="item">slide 8</div>
+    <div class="item">slide 9</div>
+    <div class="item">slide 10</div>
+    <div class="item">slide 11</div>
+    <div class="item">slide 12</div>
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+<script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+<script src="/js/owl.carousel.sync.js"></script>
+<script>
+    $(function () {
+
+        // carousel
+        $('#carousel').owlCarousel({
+            items: 1,
+            nav: true,
+            dots: true,
+            loop: true,
+            autoplay: true,
+            responsiveRefreshRate : 200,
+
+            // ...sync.js
+            thumbs: {
+                items: 4,
+                slideBy: 4,
+                nav: true,
+                dots: false,
+                smartSpeed: 200,
+                slideSpeed : 500,
+                responsiveRefreshRate : 100
+            }
+        });
+
+    });
+</script>
